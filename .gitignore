@@ -4,6 +4,3 @@ _site
 .jekyll-metadata
 vendor
 notebooks
-Gemfile
-Gemfile.lock
-
