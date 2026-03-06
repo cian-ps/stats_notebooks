@@ -4,3 +4,6 @@ _site
 .jekyll-metadata
 vendor
 notebooks
+.pyspelling.yml
+pyspelling_log
+*.py
