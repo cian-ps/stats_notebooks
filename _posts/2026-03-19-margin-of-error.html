@@ -7517,20 +7517,29 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Margin-of-Error">Margin of Error<a class="anchor-link" href="#Margin-of-Error">¶</a></h2><p>The <em>Margin of Error</em> (MOE) is a statistic that expresses the amount of random sampling error. More precisely, the margin of error is the maximum expected difference between a point estimate and the actual population parameter. The higher the MOE the more you expect a statistic to differ from the true parameter. A higher MOE means higher uncertainty.</p>
-<p>The 3 components of the MOE:</p>
-<ol>
-<li><p>critical value (Z-statistic or T-statistic)</p>
-<p>A higher critical value increases the margin of error.</p>
+<h2 id="Margin-of-Error">Margin of Error<a class="anchor-link" href="#Margin-of-Error">¶</a></h2><p>The <em>Margin of Error</em> (MOE) is a statistic that expresses the amount of random sampling error. More precisely, the margin of error is the maximum estimated difference between a point estimate and the actual population parameter. The higher the MOE the more you expect a statistic to differ from the true parameter.</p>
+<p><strong>Formula</strong>: $\large MOE=Z_{1-\alpha/2}\frac{\sigma}{\sqrt{n}}$</p>
+<p>Where:</p>
+<ul>
+<li><p>$Z_{1-\alpha/2}$ (the critical value) is the standard score $Z$ where the cumulative distribution function of that standard score $F(Z) = 1-\alpha/2$.</p>
+<p>Or: $Z=F^{-1}(1-\alpha/2)$</p>
 </li>
-<li><p>standard deviation</p>
-<p>A higher standard deviation increases the margin of error.</p>
+<li><p>$\alpha$ is the significance level, representing the fraction of the times, when the difference between the point estimate and the population parameter is greater than the margin of error.</p>
 </li>
-<li><p>sample size</p>
-<p>A higher sample size decreases the margin of error.</p>
+<li><p>${\frac{\sigma}{\sqrt{n}}}$ is  the standard deviation of a sampling distribution of the mean; the standard error.</p>
 </li>
-</ol>
-<p><strong>Formula</strong>: $MOE=Z_{\alpha/2}\frac{\sigma}{\sqrt{n}}$</p>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=75ea304d">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h4 id="Common-critical-Z-values:">Common critical Z-values:<a class="anchor-link" href="#Common-critical-Z-values:">¶</a></h4>
 </div>
 </div>
 </div>
@@ -7607,14 +7616,41 @@ a.anchor-link {
 </div>
 </div>
 </div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=8316fc7a">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Going by the Central Limit Theorem, sample means are normally distributed around the population mean. According to the empirical rule (68-95-99.7 rule), 95% of sample means are within approx. 2 standard errors from the population mean. In other words, one can say, with 95% confidence, that the population mean lies within approx. 2 standard errors from a sample mean. Such an interval is called a confidence interval and the MOE is the radius of that interval.</p>
+</div>
+</div>
+</div>
+</div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=74f76ca0">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="T-statistic">T-statistic<a class="anchor-link" href="#T-statistic">¶</a></h3><p>When the sample size is small and population variance is unknown, it's better to use the T-statistic.</p>
-<p><strong>Formula</strong>: $MOE=t_{\alpha/2}\frac{s}{\sqrt{n}}$</p>
+<h3 id="Critical-T-value">Critical T-value<a class="anchor-link" href="#Critical-T-value">¶</a></h3><p><strong>Assumptions</strong>:</p>
+<ol>
+<li>The sample size is small (&lt;30) or the population variance is unknown.</li>
+<li>The sample is drawn from a normally distributed population.</li>
+</ol>
+<p><strong>Formula</strong>: $MOE=t_{1-\alpha/2,n-1}\frac{s}{\sqrt{n}}$</p>
+<p>The critical T-value comes from a Student's T-distribution with $n-1$ degrees of freedom.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=49bb6453">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h4 id="Critical-T-values:">Critical T-values:<a class="anchor-link" href="#Critical-T-values:">¶</a></h4><p>Sample size $n = 10$</p>
 </div>
 </div>
 </div>
@@ -7691,46 +7727,13 @@ a.anchor-link {
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=d7f3d15b">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=225b0db8">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h4 id="Example:">Example:<a class="anchor-link" href="#Example:">¶</a></h4>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=a0a99b22">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-
-<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
-<span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.05</span>
-
-<span class="n">critical_t</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="n">ppf</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">alpha</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">moe</span> <span class="o">=</span> <span class="n">critical_t</span> <span class="o">*</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">ddof</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)))</span>
-<span class="n">moe</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[4]:</div>
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>np.float64(20.50467969073853)</pre>
-</div>
+<p>A T-distribution takes sample size and the uncertainty regarding the population variance into account.</p>
 </div>
 </div>
 </div>
