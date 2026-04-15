@@ -2,12 +2,35 @@ title: Stats Notebooks
 description: >-
   A collection of Jupyter notebooks that demonstrate statistical concepts
   with Python code for data analysis and data science.
-github_username:  cian-ps
 
 # Build settings
 remote_theme: "mmistakes/minimal-mistakes@4.28.0"
 plugins:
   - jekyll-include-cache
+
+minimal_mistakes_skin: "sunrise"
+
+atom_feed:
+  hide: true
+
+# author
+author:
+  name     : "Pablo Strunz"
+  bio      : "My awesome biography constrained to a sentence or two goes here."
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/cian_ps"
+
+# Defaults
+defaults:
+  # _posts
+  - scope:
+      path: "_posts"
+      type: posts
+    values:
+      layout: single
+      show_date: true
 
 exclude:
   - .sass-cache/
