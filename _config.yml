@@ -5,9 +5,9 @@ description: >-
 github_username:  cian-ps
 
 # Build settings
-theme: minima
+remote_theme: "mmistakes/minimal-mistakes@4.28.0"
 plugins:
-  - jekyll-feed
+  - jekyll-include-cache
 
 exclude:
   - .sass-cache/
