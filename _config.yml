@@ -32,6 +32,10 @@ defaults:
       layout: single
       show_date: true
 
+markdown: karmdown
+karmdown:
+  math_engine: mathjax
+
 exclude:
   - .sass-cache/
   - .jekyll-cache/
