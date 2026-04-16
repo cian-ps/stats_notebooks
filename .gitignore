@@ -7,3 +7,4 @@ notebooks
 .pyspelling.yml
 pyspelling_log
 *.py
+*sh
