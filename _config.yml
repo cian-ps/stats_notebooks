@@ -48,3 +48,8 @@ exclude:
   - vendor/gems/
   - vendor/ruby/
   - notebooks/
+  - .pyspelling.yml
+  - pyspelling_log/
+  - spell_check.py
+  - custom_nbconvert.py
+  - nbconvert.sh
