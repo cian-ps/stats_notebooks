@@ -45,3 +45,21 @@ standard error: {sigma / np.sqrt(n)}
 """)
 ```
 
+```
+n = 10
+population mean: 509.053
+sample mean: 630.1
+standard error: 89.78003352137934
+
+n = 50
+population mean: 509.053
+sample mean: 560.44
+standard error: 40.1508515952028
+
+n = 100
+population mean: 509.053
+sample mean: 523.41
+standard error: 28.390939433382613
+
+```
+

@@ -53,15 +53,51 @@ sns.heatmap(corr_matrix, annot=True, cmap="magma")
 corr_matrix
 ```
 
-```
-                          Apple  Alphabet  Bank of America (BAC)
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-Apple                  1.000000  0.787393               0.255427
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
 
-Alphabet               0.787393  1.000000               0.062079
-
-Bank of America (BAC)  0.255427  0.062079               1.000000
-```
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Apple</th>
+      <th>Alphabet</th>
+      <th>Bank of America (BAC)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Apple</th>
+      <td>1.000000</td>
+      <td>0.787393</td>
+      <td>0.255427</td>
+    </tr>
+    <tr>
+      <th>Alphabet</th>
+      <td>0.787393</td>
+      <td>1.000000</td>
+      <td>0.062079</td>
+    </tr>
+    <tr>
+      <th>Bank of America (BAC)</th>
+      <td>0.255427</td>
+      <td>0.062079</td>
+      <td>1.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div>
 
 ```
 <Figure size 640x480 with 2 Axes>

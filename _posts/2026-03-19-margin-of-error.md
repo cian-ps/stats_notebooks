@@ -25,15 +25,47 @@ z = [norm.ppf(1-a/2) for a in alphas]
 pd.DataFrame(data={"confidence level": conf, "critical value": z})
 ```
 
-```
-   confidence level  critical value
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-0                90        1.644854
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
 
-1                95        1.959964
-
-2                99        2.575829
-```
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>confidence level</th>
+      <th>critical value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>90</td>
+      <td>1.644854</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>95</td>
+      <td>1.959964</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>99</td>
+      <td>2.575829</td>
+    </tr>
+  </tbody>
+</table>
+</div>
 
 Going by the Central Limit Theorem, sample means are normally distributed around the population mean. According to the empirical rule (68-95-99.7 rule), 95% of sample means are within approx. 2 standard errors from the population mean. In other words, one can say, with 95% confidence, that the population mean lies within approx. 2 standard errors from a sample mean. Such an interval is called a confidence interval and the MOE is the radius of that interval.
 
@@ -61,15 +93,47 @@ t_ = [t.ppf(1-a/2, n-1) for a in alphas]
 pd.DataFrame(data={"confidence level": conf, "critical value": t_})
 ```
 
-```
-   confidence level  critical value
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-0                90        1.833113
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
 
-1                95        2.262157
-
-2                99        3.249836
-```
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>confidence level</th>
+      <th>critical value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>90</td>
+      <td>1.833113</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>95</td>
+      <td>2.262157</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>99</td>
+      <td>3.249836</td>
+    </tr>
+  </tbody>
+</table>
+</div>
 
 A T-distribution takes sample size and the uncertainty regarding the population variance into account.
 

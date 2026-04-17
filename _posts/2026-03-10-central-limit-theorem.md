@@ -51,6 +51,22 @@ skewness: {skew(means)}
 ```
 
 ```
+Original Distribution
+---------------------
+mean: 9.983332657718599
+var: 96.32410139368706
+skewness: 1.8846614779416377
+
+Sampling Distribution
+---------------------
+mean: 10.133291562715526
+var: 1.672859764031172
+var * n: 83.6429882015586
+skewness: 0.1326626385379318
+
+```
+
+```
 <Figure size 800x500 with 2 Axes>
 ```
 
