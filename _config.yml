@@ -1,7 +1,8 @@
-title: Stats Notebooks
+title: Statistical Thinking
+subtitle: >-
+  The Art of Learning from Data.
 description: >-
-  A collection of Jupyter notebooks that demonstrate statistical concepts
-  with Python code for data analysis and data science.
+  The Art of Learning from Data.
 
 # Build settings
 remote_theme: "mmistakes/minimal-mistakes@4.28.0"
@@ -16,11 +17,12 @@ atom_feed:
 # author
 author:
   name     : "Pablo Strunz"
-  bio      : "My awesome biography constrained to a sentence or two goes here."
+  avatar   : ""
+  bio      : "Thinking out loud about Data Science."
   links:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/cian_ps"
+      url: "https://github.com/cian-ps"
 
 # Defaults
 defaults:
@@ -32,8 +34,8 @@ defaults:
       layout: single
       show_date: true
 
-markdown: karmdown
-karmdown:
+markdown: kramdown
+kramdown:
   math_engine: mathjax
 
 exclude:
