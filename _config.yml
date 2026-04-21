@@ -1,8 +1,5 @@
-title: Statistical Thinking
-subtitle: >-
-  The Art of Learning from Data.
-description: >-
-  The Art of Learning from Data.
+title: An Evolution of Statistics
+description: The Art of Learning from Data.
 
 # Build settings
 remote_theme: "mmistakes/minimal-mistakes@4.28.0"
