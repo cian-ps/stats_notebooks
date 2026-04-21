@@ -51,7 +51,7 @@ exclude:
   - vendor/ruby/
   - notebooks/
   - .pyspelling.yml
-  - pyspelling_log/
-  - spell_check.py
+  - wordlist.dic
+  - .wordlist.txt
   - custom_nbconvert.py
   - nbconvert.sh
