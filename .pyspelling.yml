@@ -76,5 +76,5 @@ matrix:
         - pre
         - tt
   sources:
-    - '_posts/*.md'
+    - '**/*.md'
   default_encoding: utf-8
