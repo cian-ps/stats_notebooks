@@ -3,6 +3,4 @@ _site
 .jekyll-cache
 .jekyll-metadata
 vendor
-.pyspelling.yml
-pyspelling_log
-spell_check.py
+wordlist.dic

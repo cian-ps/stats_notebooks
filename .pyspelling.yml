@@ -1,0 +1,80 @@
+matrix:
+- name: nbmarkdown
+  aspell:
+    lang: en
+    d: en_US
+  dictionary:
+    wordlists:
+    - .wordlist.txt
+    output: wordlist.dic
+    encoding: utf-8
+  pipeline:
+  - pyspelling.filters.ipynb:
+      cell_type: markdown
+  - pyspelling.filters.context:
+      context_visible_first: true
+      delimiters:
+      # Ignore text between $...$ (and $$...$$)
+      - open: '(?P<open>\$+)'
+        close: '(?P=open)'
+      # Ignore multiline content between fences
+      - open: '(?s)^(?P<open> *`{3,})$'
+        close: '^(?P=open)$'
+      # Ignore text between inline back ticks
+      - open: '(?P<open>`+)'
+        close: '(?P=open)'
+  - pyspelling.filters.url:
+  - pyspelling.filters.markdown:
+  - pyspelling.filters.html:
+      comments: false
+      ignores:
+        - code
+        - pre
+        - tt
+  sources:
+    - 'notebooks/*.ipynb'
+  default_encoding: utf-8
+
+- name: nbcode
+  aspell:
+    lang: en
+    d: en_US
+    encoding: utf-8
+  pipeline:
+  - pyspelling.filters.ipynb:
+      cell_type: code
+  - pyspelling.filters.url:
+  - pyspelling.filters.python:
+  sources:
+    - 'notebooks/*.ipynb'
+  default_encoding: utf-8
+
+- name: markdown
+  aspell:
+    lang: en
+    d: en_US
+  dictionary:
+    wordlists:
+    - .wordlist.txt
+    output: wordlist.dic
+    encoding: utf-8
+  pipeline:
+  - pyspelling.filters.context:
+      context_visible_first: true
+      delimiters:
+      # Ignore text between $...$ (and $$...$$)
+      - open: '(?P<open>\$+)'
+        close: '(?P=open)'
+  - pyspelling.filters.markdown:
+      markdown_extensions:
+      - markdown.extensions.fenced_code
+  - pyspelling.filters.url:
+  - pyspelling.filters.html:
+      comments: false
+      ignores:
+        - code
+        - pre
+        - tt
+  sources:
+    - '_posts/*.md'
+  default_encoding: utf-8
