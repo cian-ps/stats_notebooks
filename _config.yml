@@ -5,6 +5,7 @@ description: The Art of Learning from Data.
 remote_theme: "mmistakes/minimal-mistakes@4.28.0"
 plugins:
   - jekyll-include-cache
+  - jekyll-feed
 
 minimal_mistakes_skin: "sunrise"
 
