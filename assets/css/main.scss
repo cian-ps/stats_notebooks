@@ -1,0 +1,25 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+search: false
+---
+
+@charset "utf-8";
+
+$background-color: #2e2e2e;
+$link-color: white;
+$highlight-bg: #f21368;
+$highlight-text: #111;
+$link-color-hover: $highlight-bg;
+
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
+@import "minimal-mistakes"; // main partials
+
+::selection {
+  background: $highlight-bg;
+  color: $highlight-text;
+}
+
+::-moz-selection {
+  background: $highlight-bg;
+  color: $highlight-text;
+}
