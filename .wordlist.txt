@@ -20,3 +20,8 @@ BAC
 permalink
 Welch's
 df
+SST
+SSR
+SSE
+regressor
+regressors
