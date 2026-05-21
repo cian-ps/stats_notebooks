@@ -25,3 +25,10 @@ SSR
 SSE
 regressor
 regressors
+OLS
+Endogeneity
+Homoscedasticity
+Heteroscedasticity
+autoregressive
+Multicollinearity
+scikit
